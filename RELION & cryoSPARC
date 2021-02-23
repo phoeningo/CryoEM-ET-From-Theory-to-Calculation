@@ -2,11 +2,11 @@ This doc mainly discusses differences between RELION and cryoSPARC.
 
 1. The coordinate system:
     Take an image shaped of (3838,3710) as example.
-    In relion it's also recognized as (3838,3710). And the coordinate (0,0) means the ________ corner. 
-    In cryoSPARC it's recognized as (3710,3838). And the coordinate (0,0) means the ________ corner. 
+    In relion it's also recognized as (3838,3710). And the coordinate (0,0) means the ________ corner.   ### ( I need to confirm this)
+    In cryoSPARC it's recognized as (3710,3838). And the coordinate (0,0) means the ________ corner.   ### ( I need to confirm this)
     
     If you import particles in cryoSPARC Import Job, the coordinates are converted according to this formula:
     
-    new_coord_x,new_coord_y = old_coord_y/ Y *X ,old_coord_x/ X *Y
+    new_coord_x,new_coord_y = old_coord_y/ Y *X ,old_coord_x/ X *Y          ### ( I need to confirm this)
     
     
