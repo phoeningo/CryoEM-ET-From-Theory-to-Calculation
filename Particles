@@ -1,0 +1,13 @@
+Particle stacks contain a X*Y*Z shape image, where X*Y is your particle size and Z means how many particles are there in a stack. Usually one micrograph own one particle stack.
+In most software, a specific particle is accessed like this : 000014@particle_stack_name.mrc(s).
+
+Only .mrcs suffix is supported in RELION while both .mrc and .mrcs are allowed in cryoSPARC. But the default format cryoSPARC use is .mrc .
+
+If you need to link .mrc to .mrcs files in your 'Particle Extraction' directory, 'cd' to your extract where your can find your particles using 'ls ' command.Then run this scripts:
+#===================
+for mrc in `ls *.mrc`
+do
+mrcs=${mrc/mrc/mrcs}
+ln -s $mrc $mrcs
+done
+#===================
